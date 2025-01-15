@@ -1,0 +1,15 @@
+.success {
+  display: grid;
+  gap: 16px;
+  place-items: center;
+}
+
+.text {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 25px;
+}
+
+.sucessText {
+  color: var(--success);
+}
