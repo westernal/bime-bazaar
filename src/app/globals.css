@@ -1,13 +1,7 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: rgba(255, 255, 255, 1);
+  --main-text: rgba(0, 0, 0, 1);
+  --secondary-text: rgba(128, 128, 128, 1);
 }
 
 html,
@@ -17,7 +11,7 @@ body {
 }
 
 body {
-  color: var(--foreground);
+  color: var(--main-text);
   background: var(--background);
 }
 
