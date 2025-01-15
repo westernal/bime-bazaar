@@ -55,7 +55,14 @@ const OwnerInformationForm = () => {
       </div>
 
       <div className={Styles.buttonWrapper}>
-        <CustomButton variant="primary" type="submit" onClick={() => {}}>
+        <CustomButton
+          variant="primary"
+          type="submit"
+          disabled={
+            !formData.nationalId || !formData.phoneNumber || !formData.addressId
+          }
+          onClick={() => {}}
+        >
           تایید و ادامه
         </CustomButton>
       </div>
