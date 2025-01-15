@@ -1,3 +1,5 @@
+"use client";
+
 import { OrderInfo } from "@/interfaces/Order";
 import React, { createContext, ReactNode, useState } from "react";
 
