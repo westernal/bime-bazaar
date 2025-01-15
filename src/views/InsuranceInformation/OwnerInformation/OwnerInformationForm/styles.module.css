@@ -14,3 +14,13 @@
   font-weight: 400;
   line-height: 28px;
 }
+
+.buttonWrapper {
+  display: flex;
+  justify-content: end;
+}
+
+.form {
+  display: grid;
+  gap: 24px;
+}

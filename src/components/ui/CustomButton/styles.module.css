@@ -3,6 +3,22 @@
   font-size: 16px;
   font-weight: 500;
   line-height: 25px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.button:hover {
+  opacity: 0.8;
+}
+
+.isLoading {
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+.button:disabled {
+  opacity: 0.2;
+  pointer-events: none;
 }
 
 .primary {
@@ -17,7 +33,7 @@
   border: 1px solid var(--main-text);
 }
 
-.primary {
+.tertiary {
   background-color: var(--address-color);
   color: var(--main-text);
   border: 1px solid var(--address-color);
