@@ -4,10 +4,12 @@ import { useHandleFormActions } from "@/hooks/useHandleFormActions";
 import Styles from "./styles.module.css";
 import CustomButton from "@/components/ui/CustomButton";
 import { useValidateForm } from "@/hooks/useValidateForm";
+import { useRouter } from "next/navigation";
 
 const OwnerInformationForm = () => {
   const { formData, handleChange, handleSubmit } = useHandleFormActions();
   const { errors, validateForm } = useValidateForm(formData);
+  const router = useRouter();
 
   const handleFormSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -49,7 +51,13 @@ const OwnerInformationForm = () => {
           لطفا آدرسی را که می‌خواهید روی بیمه‌نامه درج شود، وارد کنید.
         </p>
 
-        <CustomButton variant="tertiary" type="button" onClick={() => {}}>
+        <CustomButton
+          variant="tertiary"
+          type="button"
+          onClick={() => {
+            router.push("/?modal=list", { scroll: false });
+          }}
+        >
           انتخاب از آدرس‌های من
         </CustomButton>
       </div>
