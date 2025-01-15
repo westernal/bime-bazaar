@@ -24,3 +24,7 @@
   display: grid;
   gap: 24px;
 }
+
+.error {
+  color: var(--error);
+}
