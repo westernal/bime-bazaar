@@ -5,6 +5,7 @@
   --input-text: rgba(64, 64, 64, 1);
   --placeholder-text: rgba(117, 117, 117, 1);
   --error: rgba(230, 31, 16, 1);
+  --address-color: rgba(255, 196, 83, 1);
 }
 
 html,

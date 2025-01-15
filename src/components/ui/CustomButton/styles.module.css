@@ -1,0 +1,24 @@
+.button {
+  padding: 12px 26px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 25px;
+}
+
+.primary {
+  background-color: var(--main-text);
+  color: var(--background);
+  border: 1px solid var(--main-text);
+}
+
+.secondary {
+  background-color: var(--background);
+  color: var(--main-text);
+  border: 1px solid var(--main-text);
+}
+
+.primary {
+  background-color: var(--address-color);
+  color: var(--main-text);
+  border: 1px solid var(--address-color);
+}
