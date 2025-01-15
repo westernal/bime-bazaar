@@ -1,9 +1,11 @@
 import { InputProps } from "@/interfaces/Input";
+import Styles from "./style.module.css";
 
 const CustomInput = (props: InputProps) => {
   return (
-    <div>
+    <div className={Styles.inputWrapper}>
       <input
+        className={`${Styles.input} ${props.errorMessage && Styles.error}`}
         id={props.name}
         name={props.name}
         type={props.type}
@@ -12,7 +14,13 @@ const CustomInput = (props: InputProps) => {
         onChange={props.onChange}
         required={props.required}
       />
-      {props.errorMessage && <span>{props.errorMessage}</span>}
+      <div
+        className={`${Styles.errorMessage} ${
+          props.errorMessage ? Styles.errorMessageVisible : ""
+        }`}
+      >
+        {props.errorMessage}
+      </div>
     </div>
   );
 };

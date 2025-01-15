@@ -13,6 +13,21 @@ body {
   overflow-x: hidden;
 }
 
+button,
+input {
+  font-family: inherit;
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input {
+  -moz-appearance: textfield; /* For Firefox */
+}
+
 body {
   color: var(--main-text);
   background: var(--background);
