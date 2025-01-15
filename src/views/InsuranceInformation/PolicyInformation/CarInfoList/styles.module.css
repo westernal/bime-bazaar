@@ -1,0 +1,6 @@
+.list {
+  display: grid;
+  gap: 8px;
+  width: 100%;
+  max-width: 280px;
+}
