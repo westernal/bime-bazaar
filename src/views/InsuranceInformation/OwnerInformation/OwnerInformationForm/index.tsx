@@ -56,7 +56,7 @@ const OwnerInformationForm = () => {
           addresses.find((address) => address.id === formData.addressId)
             ?.details
         ) : (
-          <p className={`${Styles.text} ${errors.address && Styles.error}`}>
+          <p className={`${Styles.text} ${errors.addressId && Styles.error}`}>
             لطفا آدرسی را که می‌خواهید روی بیمه‌نامه درج شود، وارد کنید.
           </p>
         )}
