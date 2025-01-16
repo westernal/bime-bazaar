@@ -1,0 +1,107 @@
+.spinner,
+.spinner div {
+  box-sizing: border-box;
+}
+.spinner {
+  display: inline-block;
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+.spinner div {
+  position: absolute;
+  width: 1.6px;
+  height: 1.6px;
+  background: currentColor;
+  border-radius: 50%;
+  animation: primary 1.2s linear infinite;
+}
+
+.secondary div {
+  animation: secondary 1.2s linear infinite;
+}
+
+.spinner div:nth-child(1) {
+  animation-delay: 0s;
+  top: 9.2px;
+  left: 16.56px;
+}
+.spinner div:nth-child(2) {
+  animation-delay: -0.1s;
+  top: 5.52px;
+  left: 15.575px;
+}
+.spinner div:nth-child(3) {
+  animation-delay: -0.2s;
+  top: 2.825px;
+  left: 12.88px;
+}
+.spinner div:nth-child(4) {
+  animation-delay: -0.3s;
+  top: 1.84px;
+  left: 9.2px;
+}
+.spinner div:nth-child(5) {
+  animation-delay: -0.4s;
+  top: 2.825px;
+  left: 5.52px;
+}
+.spinner div:nth-child(6) {
+  animation-delay: -0.5s;
+  top: 5.52px;
+  left: 2.825px;
+}
+.spinner div:nth-child(7) {
+  animation-delay: -0.6s;
+  top: 9.2px;
+  left: 1.84px;
+}
+.spinner div:nth-child(8) {
+  animation-delay: -0.7s;
+  top: 12.88px;
+  left: 2.825px;
+}
+.spinner div:nth-child(9) {
+  animation-delay: -0.8s;
+  top: 15.575px;
+  left: 5.52px;
+}
+.spinner div:nth-child(10) {
+  animation-delay: -0.9s;
+  top: 16.56px;
+  left: 9.2px;
+}
+.spinner div:nth-child(11) {
+  animation-delay: -1s;
+  top: 15.575px;
+  left: 12.88px;
+}
+.spinner div:nth-child(12) {
+  animation-delay: -1.1s;
+  top: 12.88px;
+  left: 15.575px;
+}
+
+@keyframes primary {
+  0%,
+  20%,
+  80%,
+  100% {
+    color: var(--background);
+  }
+  50% {
+    color: var(--text-main);
+  }
+}
+
+@keyframes secondary {
+  0%,
+  20%,
+  80%,
+  100% {
+    color: var(--text-main);
+  }
+  50% {
+    color: var(--background);
+  }
+}

@@ -1,5 +1,5 @@
 import { InputProps } from "@/interfaces/Input";
-import Styles from "./style.module.css";
+import Styles from "./styles.module.css";
 
 const CustomInput = (props: InputProps) => {
   return (
