@@ -27,7 +27,7 @@ export const useGetAddresses = (
         const result: OrderAddress[] = await response.json();
         setAddresses(result);
       } catch (error) {
-        console.error(error);
+        alert(error);
         setAddresses([]);
       } finally {
         setLoading(false);
