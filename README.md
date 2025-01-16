@@ -93,20 +93,14 @@ We have a folder for contexts, which contains the creation of the contexts and f
 
 ## Testing
 
+All the things that was mentioned in the task description was tested using cypress;
+
 ### End-to-End Tests
 
-To run end-to-end tests, execute these commands:
-
-To open the browser:
+To run end-to-end tests, execute this command:
 
 ```sh
 npm run cypress:open
-```
-
-To run in the terminal:
-
-```sh
-npm run cy:run
 ```
 
 ## Lint
