@@ -124,7 +124,7 @@ npm run lint
 
 ## FAQ
 ### How to open a modal?
-First you need to create the component inside the modal inside this path: /src/components/shared/Modal/ModalsContent you have to wrap your modal inside ModalWrapper component inside the same Modal path then you have to configure a url query for it inside the ModalManager component inside inside the same Modal path. Keep in mind that for better performance use lazy loading for your modal's component.
+First you need to create the component inside the modal inside this path: /src/components/shared/Modal/ModalsContent you have to wrap your modal inside ModalWrapper component inside the same Modal path then you have to configure a url query for it inside the ModalManager component inside the same Modal path. Keep in mind that for better performance use lazy loading for your modal's component.
 
 For example: 
 ```sh
