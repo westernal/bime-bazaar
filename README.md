@@ -1,6 +1,8 @@
 # Bime Bazaar's Task Documentation
 
-### CAUTION: You may see a hydration error when you run the project in your browser it is because of the incompability of Next.js 15 and your browser's extensions, [Link to the issue](https://www.reddit.com/r/nextjs/comments/1gabiqn/hydration_error_when_installing_nextjs_15/?rdt=46729) 
+#### CAUTION - 1: You may see a hydration error when you run the project in your browser it is because of the incompability of Next.js 15 and your browser's extensions, [Link to the issue](https://www.reddit.com/r/nextjs/comments/1gabiqn/hydration_error_when_installing_nextjs_15/?rdt=46729) 
+
+#### CAUTION - 2: If you open the link on your iphone or any IOS device the post request wont work because of the httpOnly cookie that backend uses for post request and the backend and frontend url are not in the same origin.
 
 ## Table of Contents
 
@@ -17,6 +19,8 @@
 
 Frontend interview task for Bime Bazaar.
 Link: [Task](https://bime-bazaar.vercel.app/).
+
+This task took me approximately 8 to 16 hours (Including writing tests and documentations).
 
 ## Getting Started
 
