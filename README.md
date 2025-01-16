@@ -8,14 +8,10 @@
 2. [Getting Started](#getting-started)
 3. [Technologies](#technologies)
 4. [Project Structure](#project-structure)
-5. [Development Workflow](#development-workflow)
-6. [Coding Standards](#coding-standards)
-7. [Component Documentation](#component-documentation)
-8. [State Management](#state-management)
-9. [Styling](#styling)
-10. [Testing](#testing)
-11. [Lint](#lint)
-12. [FAQ](#faq)
+5. [State Management](#state-management)
+6. [Testing](#testing)
+7. [Lint](#lint)
+8. [FAQ](#faq)
 
 ## Introduction
 
