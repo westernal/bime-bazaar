@@ -30,13 +30,13 @@ This task took me approximately 8 to 16 hours (Including writing tests and docum
 
 To run the development server, execute the following commands:
 
-sh
+```sh
 npm install
 npm run dev
-
+```
 
 ## Technologies
-Next.JS, TypeScript, CSS modules, Zod, react-context
+Next.JS, TypeScript, CSS modules, Zod, react-context, Cypress
 
 ## Project Structure
 
