@@ -8,10 +8,13 @@ const CustomButton = ({
   style,
   disabled = false,
   variant = "primary",
+  isLoading,
 }: CustomButtonProps) => {
   return (
     <button
-      className={`${Styles.button} ${Styles[variant]}`}
+      className={`${Styles.button} ${Styles[variant]} ${
+        isLoading && Styles.isLoading
+      }`}
       type={type}
       onClick={onClick}
       style={style}

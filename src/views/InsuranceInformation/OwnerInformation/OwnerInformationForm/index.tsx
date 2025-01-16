@@ -6,9 +6,11 @@ import CustomButton from "@/components/ui/CustomButton";
 import { useValidateForm } from "@/hooks/useValidateForm";
 import { useRouter } from "next/navigation";
 import { useAddressContext } from "@/hooks/context/useAddressContext";
+import Spinner from "@/components/ui/Spinner";
 
 const OwnerInformationForm = () => {
-  const { formData, handleChange, handleSubmit } = useHandleFormActions();
+  const { formData, handleChange, handleSubmit, submitLoading } =
+    useHandleFormActions();
   const { errors, validateForm } = useValidateForm(formData);
   const router = useRouter();
   const { addresses } = useAddressContext();
@@ -74,12 +76,14 @@ const OwnerInformationForm = () => {
         <CustomButton
           variant="primary"
           type="submit"
+          isLoading={submitLoading}
           disabled={
             !formData.nationalId || !formData.phoneNumber || !formData.addressId
           }
           onClick={() => {}}
         >
-          تایید و ادامه
+          {submitLoading && <Spinner />}
+          <p> تایید و ادامه</p>
         </CustomButton>
       </div>
     </form>

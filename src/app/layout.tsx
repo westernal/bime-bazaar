@@ -4,6 +4,8 @@ import localFont from "next/font/local";
 import ModalManager from "@/components/shared/Modal/ModalManager";
 import { FormProvider } from "@/context/formContext";
 import { AddressProvider } from "@/context/addressContext";
+import { Suspense } from "react";
+import Spinner from "@/components/ui/Spinner";
 
 const vazirFont = localFont({
   src: "../../public/fonts/Vazirmatn-Regular.woff2",
@@ -25,7 +27,9 @@ export default function RootLayout({
         <FormProvider>
           <AddressProvider>
             {children}
-            <ModalManager />
+            <Suspense fallback={<Spinner />}>
+              <ModalManager />
+            </Suspense>
           </AddressProvider>
         </FormProvider>
       </body>

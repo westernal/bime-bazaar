@@ -3,17 +3,18 @@
 import { useSearchParams } from "next/navigation";
 import React from "react";
 import dynamic from "next/dynamic";
+import Spinner from "@/components/ui/Spinner";
 
 const SelectAddress = dynamic(() => import("../ModalsContent/SelectAddress"), {
-  loading: () => <p>Loading...</p>,
+  loading: () => <Spinner />,
 });
 
 const SubmitError = dynamic(() => import("../ModalsContent/SubmitError"), {
-  loading: () => <p>Loading...</p>,
+  loading: () => <Spinner />,
 });
 
 const DeleteAddress = dynamic(() => import("../ModalsContent/DeleteAddress"), {
-  loading: () => <p>Loading...</p>,
+  loading: () => <Spinner />,
 });
 
 const ModalManager = () => {

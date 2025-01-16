@@ -1,5 +1,6 @@
 "use client";
 
+import Spinner from "@/components/ui/Spinner";
 import AddressItem from "./AddressItem";
 import Styles from "./styles.module.css";
 import { useHandleAddresses } from "@/hooks/useHandleAddresses";
@@ -15,7 +16,7 @@ const AddressList = ({
 
   return (
     <ul className={Styles.list}>
-      {loading && "Loading..."}
+      {loading && <Spinner />}
       {addresses.map((address) => (
         <AddressItem
           address={address}

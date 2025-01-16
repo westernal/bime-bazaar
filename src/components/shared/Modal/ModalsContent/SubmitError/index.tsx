@@ -7,10 +7,11 @@ import { useRouter } from "next/navigation";
 import Styles from "./styles.module.css";
 import { useSubmitInsurance } from "@/hooks/API/POST/useSubmitInsurance";
 import { useFormContext } from "@/hooks/context/useFormContext";
+import Spinner from "@/components/ui/Spinner";
 
 const SubmitError = () => {
   const router = useRouter();
-  const { submitInsurance } = useSubmitInsurance();
+  const { submitInsurance, loading } = useSubmitInsurance();
   const { formData } = useFormContext();
 
   return (
@@ -28,14 +29,17 @@ const SubmitError = () => {
           <CustomButton
             onClick={() => submitInsurance(formData)}
             style={{ width: "100%" }}
+            isLoading={loading}
           >
-            تلاش مجدد
+            {loading && <Spinner />}
+            <p> تلاش مجدد</p>
           </CustomButton>
 
           <CustomButton
             onClick={() => router.replace("/", { scroll: false })}
             style={{ width: "100%" }}
             variant="secondary"
+            disabled={loading}
           >
             بازگشت
           </CustomButton>
