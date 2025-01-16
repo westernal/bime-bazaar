@@ -44,7 +44,11 @@ const DeleteAddress = () => {
         </div>
 
         <ModalFooter>
-          <CustomButton onClick={RemoveAddress} style={{ width: "100%" }}>
+          <CustomButton
+            onClick={RemoveAddress}
+            style={{ width: "100%" }}
+            id="confirm-delete"
+          >
             تایید
           </CustomButton>
 

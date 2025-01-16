@@ -9,12 +9,14 @@ const CustomButton = ({
   disabled = false,
   variant = "primary",
   isLoading,
+  id,
 }: CustomButtonProps) => {
   return (
     <button
       className={`${Styles.button} ${Styles[variant]} ${
         isLoading && Styles.isLoading
       }`}
+      id={id}
       type={type}
       onClick={onClick}
       style={style}

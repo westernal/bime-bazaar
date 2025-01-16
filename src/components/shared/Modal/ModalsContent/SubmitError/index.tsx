@@ -37,6 +37,7 @@ const SubmitError = () => {
           <CustomButton
             onClick={() => submitInsurance(formData)}
             style={{ width: "100%" }}
+            id="re-submit"
             isLoading={loading}
           >
             {loading && <Spinner />}

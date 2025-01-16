@@ -15,7 +15,7 @@ const AddressList = ({
   const { addresses, loading, openDeleteModal } = useHandleAddresses();
 
   return (
-    <ul className={Styles.list}>
+    <ul id="address-list" className={Styles.list}>
       {loading && <Spinner />}
       {addresses.map((address) => (
         <AddressItem

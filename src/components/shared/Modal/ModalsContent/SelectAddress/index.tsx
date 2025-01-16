@@ -29,6 +29,7 @@ const SelectAddress = () => {
         <ModalFooter>
           <CustomButton
             onClick={selectAddress}
+            id="choose"
             style={{ width: "100%" }}
             disabled={!selectedId}
           >

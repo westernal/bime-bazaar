@@ -18,7 +18,7 @@ const AddressItem = ({
   selectedValue,
 }: AddressItemProps) => {
   return (
-    <li className={Styles.item}>
+    <li className={`${Styles.item} address-item`}>
       <CustomInput
         name={"address"}
         value={address.id}
@@ -38,7 +38,10 @@ const AddressItem = ({
         <p className={Styles.text}>{address.details}</p>
       </div>
 
-      <button className={Styles.close} onClick={() => onDelete(address.id)}>
+      <button
+        className={`${Styles.close} delete-button`}
+        onClick={() => onDelete(address.id)}
+      >
         <CloseIcon size={10} color="#FFA5A5" />
       </button>
     </li>

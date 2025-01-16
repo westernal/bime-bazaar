@@ -8,4 +8,5 @@ export interface CustomButtonProps {
   disabled?: boolean;
   isLoading?: boolean;
   style?: CSSProperties;
+  id?: string;
 }
