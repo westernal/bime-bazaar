@@ -15,6 +15,7 @@ const OwnerInformationForm = () => {
 
   const handleFormSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    console.log(validateForm());
     if (validateForm()) {
       handleSubmit();
     }

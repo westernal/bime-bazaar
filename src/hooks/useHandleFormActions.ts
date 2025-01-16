@@ -1,7 +1,9 @@
 import { useFormContext } from "@/hooks/context/useFormContext";
+import { useSubmitInsurance } from "./API/POST/useSubmitInsurance";
 
 export const useHandleFormActions = () => {
   const { formData, setFormData } = useFormContext();
+  const { loading, submitInsurance } = useSubmitInsurance();
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -11,8 +13,8 @@ export const useHandleFormActions = () => {
   };
 
   const handleSubmit = () => {
-    console.log("Form submitted:", formData);
+    submitInsurance(formData);
   };
 
-  return { formData, handleChange, handleSubmit };
+  return { formData, handleChange, handleSubmit, submitLoading: loading };
 };
