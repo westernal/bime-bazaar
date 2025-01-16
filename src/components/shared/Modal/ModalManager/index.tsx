@@ -1,7 +1,7 @@
 "use client";
 
 import { useSearchParams } from "next/navigation";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import Spinner from "@/components/ui/Spinner";
 
@@ -19,6 +19,14 @@ const DeleteAddress = dynamic(() => import("../ModalsContent/DeleteAddress"), {
 
 const ModalManager = () => {
   const searchParams = useSearchParams();
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) return null;
+
   const modal = searchParams.get("modal");
 
   return (
