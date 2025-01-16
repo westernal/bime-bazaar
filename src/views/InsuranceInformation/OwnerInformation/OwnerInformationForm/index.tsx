@@ -61,15 +61,17 @@ const OwnerInformationForm = () => {
           </p>
         )}
 
-        <CustomButton
-          variant="tertiary"
-          type="button"
-          onClick={() => {
-            router.push("/?modal=address", { scroll: false });
-          }}
-        >
-          انتخاب از آدرس‌های من
-        </CustomButton>
+        {formData.addressId ? null : (
+          <CustomButton
+            variant="tertiary"
+            type="button"
+            onClick={() => {
+              router.push("/?modal=address", { scroll: false });
+            }}
+          >
+            انتخاب از آدرس‌های من
+          </CustomButton>
+        )}
       </div>
 
       <div className={Styles.buttonWrapper}>
