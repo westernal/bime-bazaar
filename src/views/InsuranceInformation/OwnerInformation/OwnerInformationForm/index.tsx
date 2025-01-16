@@ -79,9 +79,7 @@ const OwnerInformationForm = () => {
           variant="primary"
           type="submit"
           isLoading={submitLoading}
-          disabled={
-            !formData.nationalId || !formData.phoneNumber || !formData.addressId
-          }
+          disabled={!formData.nationalId || !formData.phoneNumber}
           onClick={() => {}}
         >
           {submitLoading && <Spinner />}
