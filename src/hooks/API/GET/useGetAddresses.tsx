@@ -16,7 +16,10 @@ export const useGetAddresses = (
 
       try {
         const response = await fetch(
-          `${process.env.NEXT_PUBLIC_BACKEND_URL}/my-addresses/`
+          `${process.env.NEXT_PUBLIC_BACKEND_URL}/my-addresses/`,
+          {
+            credentials: "include",
+          }
         );
         if (!response.ok) {
           throw new Error("Failed to fetch addresses");
