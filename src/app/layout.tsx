@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import localFont from "next/font/local";
 import ModalManager from "@/components/shared/Modal/ModalManager";
+import { FormProvider } from "@/context/formContext";
+import { AddressProvider } from "@/context/addressContext";
 
 const vazirFont = localFont({
   src: "../../public/fonts/Vazirmatn-Regular.woff2",
@@ -20,8 +22,12 @@ export default function RootLayout({
   return (
     <html lang="fa" dir="rtl">
       <body className={vazirFont.className}>
-        {children}
-        <ModalManager />
+        <FormProvider>
+          <AddressProvider>
+            {children}
+            <ModalManager />
+          </AddressProvider>
+        </FormProvider>
       </body>
     </html>
   );

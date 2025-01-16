@@ -13,7 +13,7 @@ const AddressItem = ({ address, onDelete, onChange }: AddressItemProps) => {
   return (
     <li className={Styles.item}>
       <CustomInput
-        name={address.id}
+        name={"address"}
         value={address.id}
         onChange={onChange}
         type="radio"

@@ -1,15 +1,23 @@
+"use client";
+
+import { useGetAddresses } from "@/hooks/API/GET/useGetAddresses";
 import AddressItem from "./AddressItem";
 import Styles from "./styles.module.css";
 
 const AddressList = () => {
-  const address = {
-    id: "s",
-    name: "salam",
-    details: "sasnd dsadbashdbas",
-  };
+  const { data: addresses, loading } = useGetAddresses();
+
   return (
     <ul className={Styles.list}>
-      <AddressItem address={address} onChange={() => {}} onDelete={() => {}} />
+      {loading && "Loading..."}
+      {addresses.map((address) => (
+        <AddressItem
+          address={address}
+          key={address.id}
+          onChange={() => {}}
+          onDelete={() => {}}
+        />
+      ))}
     </ul>
   );
 };
