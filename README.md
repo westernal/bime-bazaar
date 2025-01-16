@@ -1,6 +1,6 @@
 # Bime Bazaar's Task Documentation
 
-## CAUTION: You may see a hydration error when you run the browser it is because of the incompability of Next.js 15 and your browser's extensions, [Link to the issue](https://www.reddit.com/r/nextjs/comments/1gabiqn/hydration_error_when_installing_nextjs_15/?rdt=46729) 
+### CAUTION: You may see a hydration error when you run the project in your browser it is because of the incompability of Next.js 15 and your browser's extensions, [Link to the issue](https://www.reddit.com/r/nextjs/comments/1gabiqn/hydration_error_when_installing_nextjs_15/?rdt=46729) 
 
 ## Table of Contents
 
