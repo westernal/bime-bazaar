@@ -15,9 +15,9 @@ const ModalHeader = ({ title }: { title: string }) => {
     <header className={Styles.header}>
       <h3 className={Styles.title}>{title}</h3>
 
-      <div className={Styles.close} onClick={closeModal}>
+      <button className={Styles.close} onClick={closeModal}>
         <CloseIcon />
-      </div>
+      </button>
     </header>
   );
 };

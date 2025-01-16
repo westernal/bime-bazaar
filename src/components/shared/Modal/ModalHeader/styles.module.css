@@ -13,4 +13,6 @@
 
 .close {
   cursor: pointer;
+  border: none;
+  background: inherit;
 }

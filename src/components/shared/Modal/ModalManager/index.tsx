@@ -4,7 +4,7 @@ import { useSearchParams } from "next/navigation";
 import React from "react";
 import dynamic from "next/dynamic";
 
-const AddressList = dynamic(() => import("../ModalsContent/AddressList"), {
+const SelectAddress = dynamic(() => import("../ModalsContent/SelectAddress"), {
   loading: () => <p>Loading...</p>,
 });
 
@@ -14,7 +14,7 @@ const ModalManager = () => {
 
   return (
     <>
-      {modal === "list" && <AddressList />}
+      {modal === "address" && <SelectAddress />}
 
       {modal === "permission" && <></>}
     </>

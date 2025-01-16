@@ -14,13 +14,16 @@ const CustomInput = (props: InputProps) => {
         onChange={props.onChange}
         required={props.required}
       />
-      <div
-        className={`${Styles.errorMessage} ${
-          props.errorMessage ? Styles.errorMessageVisible : ""
-        }`}
-      >
-        {props.errorMessage}
-      </div>
+
+      {!props.errorDisabled && (
+        <div
+          className={`${Styles.errorMessage} ${
+            props.errorMessage ? Styles.errorMessageVisible : ""
+          }`}
+        >
+          {props.errorMessage}
+        </div>
+      )}
     </div>
   );
 };

@@ -55,7 +55,7 @@ const OwnerInformationForm = () => {
           variant="tertiary"
           type="button"
           onClick={() => {
-            router.push("/?modal=list", { scroll: false });
+            router.push("/?modal=address", { scroll: false });
           }}
         >
           انتخاب از آدرس‌های من
