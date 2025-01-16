@@ -21,7 +21,7 @@ const DeleteAddress = () => {
     );
 
     setDeletingAddress(undefined);
-    router.push("/?modal=address", { scroll: false });
+    router.replace("/?modal=address", { scroll: false });
   };
 
   useEffect(() => {
