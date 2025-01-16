@@ -7,4 +7,5 @@ export interface InputProps {
   errorMessage?: string;
   required?: boolean;
   errorDisabled?: boolean;
+  checked?: boolean;
 }

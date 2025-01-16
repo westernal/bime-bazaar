@@ -4,7 +4,13 @@ import AddressItem from "./AddressItem";
 import Styles from "./styles.module.css";
 import { useHandleAddresses } from "@/hooks/useHandleAddresses";
 
-const AddressList = () => {
+const AddressList = ({
+  selectedId,
+  setSelectedId,
+}: {
+  selectedId: string | undefined;
+  setSelectedId: (id: string) => void;
+}) => {
   const { addresses, loading, openDeleteModal } = useHandleAddresses();
 
   return (
@@ -14,7 +20,8 @@ const AddressList = () => {
         <AddressItem
           address={address}
           key={address.id}
-          onChange={() => {}}
+          selectedValue={selectedId}
+          onChange={setSelectedId}
           onDelete={openDeleteModal}
         />
       ))}

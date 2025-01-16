@@ -13,6 +13,7 @@ const CustomInput = (props: InputProps) => {
         placeholder={props.placeholder}
         onChange={props.onChange}
         required={props.required}
+        checked={props.checked}
       />
 
       {!props.errorDisabled && (

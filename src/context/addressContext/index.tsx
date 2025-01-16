@@ -10,8 +10,6 @@ interface AddressContextType {
   setDeletingAddress: React.Dispatch<
     React.SetStateAction<OrderAddress | undefined>
   >;
-  selectedId: string;
-  setSelectedId: React.Dispatch<React.SetStateAction<string>>;
 }
 
 export const AddressContext = createContext<AddressContextType | undefined>(
@@ -21,7 +19,6 @@ export const AddressContext = createContext<AddressContextType | undefined>(
 export const AddressProvider = ({ children }: { children: ReactNode }) => {
   const [addresses, setAddresses] = useState<OrderAddress[]>([]);
   const [deletingAddress, setDeletingAddress] = useState<OrderAddress>();
-  const [selectedId, setSelectedId] = useState<string>("");
 
   return (
     <AddressContext.Provider
@@ -30,8 +27,6 @@ export const AddressProvider = ({ children }: { children: ReactNode }) => {
         setAddresses,
         deletingAddress,
         setDeletingAddress,
-        selectedId,
-        setSelectedId,
       }}
     >
       {children}
