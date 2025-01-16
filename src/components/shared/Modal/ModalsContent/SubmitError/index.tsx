@@ -14,7 +14,7 @@ import { useEffect } from "react";
 
 const SubmitError = () => {
   const router = useRouter();
-  const { submitInsurance, loading } = useSubmitInsurance();
+  const { submitInsurance, loading } = useSubmitInsurance(true);
   const { formData } = useFormContext();
   const { validateForm } = useValidateForm(formData);
 

@@ -2,7 +2,7 @@ import { OrderInfo } from "@/interfaces/Order";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
-export const useSubmitInsurance = () => {
+export const useSubmitInsurance = (shouldReplaceRoute?: boolean) => {
   const [loading, setLoading] = useState(false);
   const router = useRouter();
 
@@ -32,7 +32,11 @@ export const useSubmitInsurance = () => {
         throw new Error("Failed to submit insurance");
       }
 
-      router.replace("/successful-submit");
+      if (shouldReplaceRoute) {
+        router.replace("/successful-submit");
+      } else {
+        router.push("/successful-submit");
+      }
     } catch (error) {
       alert(error);
       router.push("/?modal=error");
