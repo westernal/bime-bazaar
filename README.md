@@ -11,10 +11,11 @@
 3. [Technologies](#technologies)
 4. [Project Structure](#project-structure)
 5. [State Management](#state-management)
-6. [Testing](#testing)
-7. [CI/CD](#ci-cd)
-8. [Lint](#lint)
-9. [FAQ](#faq)
+6. [LightHouse Score](#lighthouse-score)
+7. [Testing](#testing)
+8. [CI/CD](#ci-cd)
+9. [Lint](#lint)
+10. [FAQ](#faq)
 
 ## Introduction
 
@@ -91,6 +92,11 @@ This folder is for general things for example we have an icons folder inside it 
 ## State Management
 
 We have a folder for contexts, which contains the creation of the contexts and for each context we have a hook inside /hooks/context to use the data.
+
+## Lighthouse Score
+
+![image](https://github.com/user-attachments/assets/e0eb1669-4376-4de3-bfe6-6b3f570c078b)
+
 
 ## Testing
 
