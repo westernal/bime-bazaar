@@ -9,7 +9,11 @@ const SuccessFooter = () => {
 
   return (
     <footer className={Styles.footer}>
-      <CustomButton variant="primary" onClick={() => router.back()}>
+      <CustomButton
+        id="back-button"
+        variant="primary"
+        onClick={() => router.back()}
+      >
         بازگشت
       </CustomButton>
     </footer>
