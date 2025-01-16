@@ -8,4 +8,14 @@ export interface InputProps {
   required?: boolean;
   errorDisabled?: boolean;
   checked?: boolean;
+  inputMode?:
+    | "search"
+    | "email"
+    | "tel"
+    | "text"
+    | "url"
+    | "none"
+    | "numeric"
+    | "decimal"
+    | undefined;
 }

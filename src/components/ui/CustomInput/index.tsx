@@ -14,6 +14,7 @@ const CustomInput = (props: InputProps) => {
         onChange={props.onChange}
         required={props.required}
         checked={props.checked}
+        inputMode={props.inputMode}
       />
 
       {!props.errorDisabled && (

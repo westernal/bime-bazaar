@@ -35,6 +35,7 @@ const OwnerInformationForm = () => {
           value={formData.nationalId}
           placeholder="کد ملی"
           type="number"
+          inputMode="numeric"
           name="nationalId"
           errorMessage={errors.nationalId}
         />
@@ -42,6 +43,7 @@ const OwnerInformationForm = () => {
         <CustomInput
           onChange={handleChange}
           value={formData.phoneNumber}
+          inputMode="numeric"
           placeholder="شماره تلفن همراه"
           type="number"
           name="phoneNumber"
