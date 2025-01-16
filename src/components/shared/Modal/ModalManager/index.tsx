@@ -3,9 +3,16 @@
 import { useSearchParams } from "next/navigation";
 import React from "react";
 import dynamic from "next/dynamic";
-import DeleteAddress from "../ModalsContent/DeleteAddress";
 
 const SelectAddress = dynamic(() => import("../ModalsContent/SelectAddress"), {
+  loading: () => <p>Loading...</p>,
+});
+
+const SubmitError = dynamic(() => import("../ModalsContent/SubmitError"), {
+  loading: () => <p>Loading...</p>,
+});
+
+const DeleteAddress = dynamic(() => import("../ModalsContent/DeleteAddress"), {
   loading: () => <p>Loading...</p>,
 });
 
@@ -18,6 +25,8 @@ const ModalManager = () => {
       {modal === "address" && <SelectAddress />}
 
       {modal === "delete" && <DeleteAddress />}
+
+      {modal === "error" && <SubmitError />}
     </>
   );
 };

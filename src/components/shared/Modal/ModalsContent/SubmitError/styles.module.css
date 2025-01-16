@@ -1,0 +1,11 @@
+.question {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 21.88px;
+}
+
+.textWrapper {
+  display: grid;
+  gap: 10px;
+  padding: 22px 12px 20px 12px;
+}
