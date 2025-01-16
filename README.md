@@ -35,7 +35,7 @@ Next.JS, TypeScript, CSS modules, Zod, react-context
 ## Project Structure
 
 
-sh
+```sh
 /src
   /app
   /components
@@ -53,7 +53,7 @@ sh
     /data
     /icons
   /views
-
+```
 
 ### App
 
@@ -95,29 +95,29 @@ To run end-to-end tests, execute these commands:
 
 To open the browser:
 
-sh
+```sh
 npm run cypress:open
-
+```
 
 To run in the terminal:
 
-sh
+```sh
 npm run cy:run
-
+```
 
 ## Lint
 To run ESLint, execute the following commands:
 
-sh
+```sh
 npm run lint
-
+```
 
 ## FAQ
 ### How to open a modal?
 First you need to create the component inside the modal inside this path: /src/components/shared/Modal/ModalsContent you have to wrap your modal inside ModalWrapper component inside the same Modal path then you have to configure a url query for it inside the ModalManager component inside inside the same Modal path. Keep in mind that for better performance use lazy loading for your modal's component.
 
 For example: 
-sh
+```sh
 const SelectAddress = dynamic(() => import("../ModalsContent/SelectAddress"), {
   loading: () => <Spinner />,
 });
@@ -131,3 +131,4 @@ const ModalManager = () => {
 };
 
 export default Options;
+```
