@@ -13,7 +13,7 @@ export const useSubmitInsurance = () => {
       const response = await fetch(
         `${process.env.NEXT_PUBLIC_BACKEND_URL}/order/completion/`,
         {
-          method: "POST", // HTTP method
+          method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
