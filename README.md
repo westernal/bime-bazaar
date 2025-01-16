@@ -12,8 +12,9 @@
 4. [Project Structure](#project-structure)
 5. [State Management](#state-management)
 6. [Testing](#testing)
-7. [Lint](#lint)
-8. [FAQ](#faq)
+7. [CI/CD](#ci-cd)
+8. [Lint](#lint)
+9. [FAQ](#faq)
 
 ## Introduction
 
@@ -94,14 +95,19 @@ We have a folder for contexts, which contains the creation of the contexts and f
 ## Testing
 
 All the things that was mentioned in the task description was tested using cypress;
+![image](https://github.com/user-attachments/assets/aad7dbde-7894-48e0-949e-3272c37dbe86)
+![Screenshot 2025-01-16 213941](https://github.com/user-attachments/assets/dd7904a7-14b8-468e-a4fb-29be67945b50)
 
-### End-to-End Tests
+
 
 To run end-to-end tests, execute this command:
 
 ```sh
 npm run cypress:open
 ```
+
+## CI CD
+The cypress tests will run after each push using a CI/CD workflow file located in .github/workflows/cypress.yml
 
 ## Lint
 To run ESLint, execute the following commands:
