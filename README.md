@@ -20,6 +20,8 @@
 Frontend interview task for Bime Bazaar.
 Link: [Task](https://bime-bazaar.vercel.app/).
 
+This task took me approximately 8 to 16 hours (Including writing tests and documentations).
+
 ## Getting Started
 
 ### Running Dev
