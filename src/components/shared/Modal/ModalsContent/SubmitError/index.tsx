@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 
 import CustomButton from "@/components/ui/CustomButton";
@@ -8,11 +9,18 @@ import Styles from "./styles.module.css";
 import { useSubmitInsurance } from "@/hooks/API/POST/useSubmitInsurance";
 import { useFormContext } from "@/hooks/context/useFormContext";
 import Spinner from "@/components/ui/Spinner";
+import { useValidateForm } from "@/hooks/useValidateForm";
+import { useEffect } from "react";
 
 const SubmitError = () => {
   const router = useRouter();
   const { submitInsurance, loading } = useSubmitInsurance();
   const { formData } = useFormContext();
+  const { validateForm } = useValidateForm(formData);
+
+  useEffect(() => {
+    if (!validateForm()) router.replace("/", { scroll: false });
+  }, []);
 
   return (
     <ModalWrapper>

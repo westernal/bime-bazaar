@@ -23,7 +23,6 @@ export const useValidateForm = (formData: OrderInfo) => {
       setErrors({});
       return true;
     } catch (err) {
-      console.error(err);
       if (err instanceof z.ZodError) {
         const fieldErrors: { [key: string]: string } = {};
         err.errors.forEach((error) => {
