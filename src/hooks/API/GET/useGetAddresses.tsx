@@ -1,13 +1,18 @@
+import { useAddressContext } from "@/hooks/context/useAddressContext";
 import { OrderAddress } from "@/interfaces/Order";
 import { useEffect, useState } from "react";
 
 export const useGetAddresses = () => {
-  const [data, setData] = useState<OrderAddress[]>([]);
-  const [loading, setLoading] = useState(true);
+  const { setAddresses, addresses } = useAddressContext();
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const fetchAddresses = async (): Promise<void> => {
-      setLoading(true);
+      if (addresses.length > 0) {
+        // Don't fetch if there is already a list
+        return;
+      } else setLoading(true);
+
       try {
         const response = await fetch(
           `${process.env.NEXT_PUBLIC_BACKEND_URL}/my-addresses/`
@@ -16,17 +21,17 @@ export const useGetAddresses = () => {
           throw new Error("Failed to fetch addresses");
         }
         const result: OrderAddress[] = await response.json();
-        setData(result);
+        setAddresses(result);
       } catch (error) {
         console.error(error);
-        setData([]);
+        setAddresses([]);
       } finally {
         setLoading(false);
       }
     };
 
     fetchAddresses();
-  }, []);
+  }, [addresses.length, setAddresses]);
 
-  return { data, loading };
+  return { addresses, loading };
 };

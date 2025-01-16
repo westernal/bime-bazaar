@@ -5,7 +5,7 @@ import AddressItem from "./AddressItem";
 import Styles from "./styles.module.css";
 
 const AddressList = () => {
-  const { data: addresses, loading } = useGetAddresses();
+  const { addresses, loading } = useGetAddresses();
 
   return (
     <ul className={Styles.list}>
