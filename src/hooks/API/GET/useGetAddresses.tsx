@@ -1,9 +1,10 @@
-import { useAddressContext } from "@/hooks/context/useAddressContext";
 import { OrderAddress } from "@/interfaces/Order";
-import { useEffect, useState } from "react";
+import { Dispatch, SetStateAction, useEffect, useState } from "react";
 
-export const useGetAddresses = () => {
-  const { setAddresses, addresses } = useAddressContext();
+export const useGetAddresses = (
+  addresses: OrderAddress[],
+  setAddresses: Dispatch<SetStateAction<OrderAddress[]>>
+) => {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -33,5 +34,5 @@ export const useGetAddresses = () => {
     fetchAddresses();
   }, [addresses.length, setAddresses]);
 
-  return { addresses, loading };
+  return { loading };
 };

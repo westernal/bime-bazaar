@@ -5,7 +5,7 @@ import { OrderAddress } from "@/interfaces/Order";
 
 interface AddressItemProps {
   address: OrderAddress;
-  onDelete: () => void;
+  onDelete: (id: string) => void;
   onChange: () => void;
 }
 
@@ -28,7 +28,7 @@ const AddressItem = ({ address, onDelete, onChange }: AddressItemProps) => {
         <p className={Styles.text}>{address.details}</p>
       </div>
 
-      <button className={Styles.close} onClick={onDelete}>
+      <button className={Styles.close} onClick={() => onDelete(address.id)}>
         <CloseIcon size={10} color="#FFA5A5" />
       </button>
     </li>

@@ -1,11 +1,11 @@
 "use client";
 
-import { useGetAddresses } from "@/hooks/API/GET/useGetAddresses";
 import AddressItem from "./AddressItem";
 import Styles from "./styles.module.css";
+import { useHandleAddresses } from "@/hooks/useHandleAddresses";
 
 const AddressList = () => {
-  const { addresses, loading } = useGetAddresses();
+  const { addresses, loading, openDeleteModal } = useHandleAddresses();
 
   return (
     <ul className={Styles.list}>
@@ -15,7 +15,7 @@ const AddressList = () => {
           address={address}
           key={address.id}
           onChange={() => {}}
-          onDelete={() => {}}
+          onDelete={openDeleteModal}
         />
       ))}
     </ul>
